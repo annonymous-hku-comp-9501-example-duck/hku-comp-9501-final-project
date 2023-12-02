@@ -1,0 +1,4 @@
+type: vlm
+
+name: Salesforce/blip2-flan-t5-xl #Salesforce/blip-image-captioning-large #Salesforce/blip2-flan-t5-xl
+finetuning: lora #lora, qformer

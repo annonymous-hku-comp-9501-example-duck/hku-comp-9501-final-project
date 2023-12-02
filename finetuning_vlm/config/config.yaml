@@ -1,0 +1,42 @@
+defaults:
+  - dataset: drivelmv1
+  - model: vlm
+
+
+exp_folder_name: DriveLM_00_initial_exps
+expname: DriveLM
+wandb_name: DriveLMv1_${now:%Y-%m-%d_%H-%M-%S}
+
+
+hydra:
+  run:
+    dir: outputs/${exp_folder_name}/${expname}/${hydra.job.override_dirname}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - expname
+        kv_sep: '='
+        item_sep: '_'
+    chdir: True
+
+
+seed: 1234
+debug: 0
+overfit: 0
+resume: 0
+local: 0 # 1: run on local machine, 0: run on cluster
+
+gpus: 4
+num_workers: 8
+batch_size: 16
+max_seq_len: 70
+
+training:
+  max_epochs: 100
+  val_every_n_epochs: 1
+
+optimization:
+  lr_scheduler: cosine
+  warmup_steps: 1
+  lr: 5e-5

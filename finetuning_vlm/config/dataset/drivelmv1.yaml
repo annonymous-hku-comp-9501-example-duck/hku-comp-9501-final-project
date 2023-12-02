@@ -1,0 +1,14 @@
+name: DriveLM
+
+data_path: data/DriveLM_v2
+# sample: image # question, image
+training_data: action_full # QA, action, both, action_full
+QA_version: v3 # v0, v11
+QA_type: all #"Perception" or "Prediction" or "Planning" or "all"
+QA_reference: tags # 'tags', description, description_answer, coordinates
+filter: front_view # front_view, none
+discretize: linear # 'linear', 'square', 'nonlinear'
+num_bins: 256
+action_command_input: True
+command_type: 'action_template' # 'action_template', 'safe_actions', 'answer_ego'
+add_past_traj: True
