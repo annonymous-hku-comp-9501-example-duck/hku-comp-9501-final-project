@@ -1,0 +1,113 @@
+#Planning Question
+2.1 自车应该注意什么交通信号: 2.1 What signal should ego-vehicle be aware of?
+2.2 哪些车道线需要被注意到: 2.2 What lanelines should ego-vehicle be aware of?
+2.3 自车的目标动作: 2.3 What is the goal point of ego-vehicle?
+2.4 自车按照什么逻辑去到达下一个可能的位置: 2.4 In what logic should ego-vehicle follow to direct/guide the next possible postion of ego-vehicle?
+2.5 自车应考虑目标的逻辑顺序: 2.5 In what logic order should ego-vehicle consider the priority of observation A/B/C/D ?
+2.6 基于观测，自车可能采取的行动: 2.6 What is the possible action of ego-vehicle based on observation?
+2.7 自车采取动作后与B物体相撞的可能性: 2.7 In what possibility will ego-vehicle collide with object A based on action A?
+
+#Prediction Queation
+目标A的当前观测移动状态: What is the movement of object A?
+A是否会在B的行进方向上: Would object A be in the direction of object B ?
+A是否会在自车的行进方向上: Would object A be in the direction of ego-vehicle?
+A是否会基于B改变其运动状态: Would object A changes its moving status based on observation?
+A的未来预计目标状态: What is the goal point of object A?
+A基于B可能采取的行动及可能性: What is the possible action A of object A based on observation?
+
+A非交通标志: A is not traffic sigh
+B含交通标志: B contains traffic sighs
+A,B非交通标志: A and B are not traffic sighs
+
+#Answer
+<(.+)>的当前观测移动状态为: the movement of <\1> is
+<(.+)>的行进方向上: the direction of <\1>
+自车的行进方向上: the direction of ego-vehicle
+基于对<(.+)>的观察: based on the observation of <\1>
+改变其运动状态: change its moving status
+自车可能采取的行动为: the possible action of ego-vehicle is
+因而自车应当采取的行动为: so ego-vehicle should
+<(.+)>的未来预计目标状态为: the goal point of <\1> is
+<(.+)>可能采取的行动为: the possible action of <\1> is
+自车与<(.+)>碰撞概率为: the probability of collision between the ego vehicle and <\1> is 
+他的运动状态为: the movement of it is 
+暂时留空: no need to answer temporarily
+采取该行动的概率为: the probability of taking this action is
+自车应当注意的交通信号为: the signal should ego-vehicle be aware of is
+自车应考虑目标的优先级为: the priority of the observed target for the ego vehicle is
+按照降序: In descending order
+需要被注意到: should be aware of
+首先注意到: firstly noticed that
+其次注意到: secondly noticed that
+最后注意到: finally noticed that
+他的运动状态是: the moving status of it is
+自车的目标动作为: the goal point of ego-vehicle is
+采取(.+)的行动后: after taking the action of \1
+若碰撞概率为高: If the probability of collision is high
+责任归属是否有更大倾向为自车:  is there a greater tendency for the responsibility to lie with the own vehicle
+交通标志: traffic signs
+
+
+
+原因是: because
+#原因集
+避免碰撞: avoid collision
+遵守交通规则: follow traffic rules
+保持安全距离: Keep a safe distance
+不存在安全问题: no safety issue
+
+#Action Set plus
+加速: accelerate
+减速: decelerate
+保持速度: maintain speed
+跟随前车: follow the front car
+变至左车道: change to the left lane
+变至右车道: change to the right lane
+保持运动状态: maintain the movement status
+直行加速: go straight and accelerate
+直行减速: go straight and decelerate
+直行匀速: go straight and maintain speed
+右转加速: turn right and accelerate
+右转减速: turn right and decelerate
+右转匀速: turn right and maintain speed
+左转加速: turn left and accelerate
+左转匀速: turn left and maintain speed
+左转减速: turn left and decelerate
+踩死刹车: slam on the brakes
+
+#Action Set basic
+左转: "turn left "
+右转: "turn right "
+静止: stop
+直行: "go straight "
+
+#信号集
+红灯: red light
+黄灯: yellow light
+绿灯: green light
+掉头: make a U-turn
+前进: go straight
+禁左: no left turn
+禁右: no right turn
+略左: slight left
+略右: slight right
+禁止左转: no left turn
+禁止右转: no right turn
+禁止掉头: no U-turn
+略左直行: slight left
+略右直行: slight right
+
+#Common
+不在: not in
+不会: will not
+规划: Planning
+预测: Prediction
+会: will
+在: in
+高: high
+中: medium
+低: low
+无: none
+是: "yes"
+否: "no"
+
